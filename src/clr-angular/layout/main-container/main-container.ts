@@ -50,6 +50,10 @@ export class ClrMainContainer implements OnDestroy, OnInit {
   }
 
   ngOnDestroy() {
-    this._subscription.unsubscribe();
+    try {
+      this._subscription.unsubscribe(); 
+    } catch (error) {
+      
+    }
   }
 }
